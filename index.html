@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>键感 · 盲打练习台</title><link rel="stylesheet" href="style.css">
+<script defer src="trainer.js"></script>
+</head>
+<body>
+<header><div class="wrap mast"><span class="brand"><b aria-hidden="true">⌨</b> 键感</span><span class="mastlabel">盲打练习台</span><a href="训练方案.md">阅读训练方案 ↗</a></div></header>
+<main class="wrap">
+<h1>准确度练习</h1><p class="intro">从容易打错的键开始，把标点放回日常句子里。</p>
+<nav class="modes" aria-label="训练项目"></nav>
+<div class="layout"><div class="work">
+<section class="card practice"><div class="titleline"><h2 id="title"></h2><span id="counter"></span></div>
+<div class="progress"><i id="bar"></i></div>
+<p id="prompt" aria-label="练习题目"></p>
+<label for="entry" id="inputLabel">练习输入</label>
+<input id="entry" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="点这里，按顺序输入上方内容">
+<p id="feedback" role="status"></p><div class="controls"><button id="again">重练本题</button><button id="next">换一题</button></div></section>
+<section class="card keys"><div class="titleline"><h2>键位图</h2><label class="toggle"><input type="checkbox" checked id="hints"> 显示提示</label></div>
+<div class="keyboard-scroll"><div id="keyboard" aria-label="美式 QWERTY 键盘"></div></div>
+<p id="keyhint"></p></section></div>
+<aside><section class="card summary"><h2>本轮表现</h2><div class="score" id="accuracy">—</div><div class="caption">首次命中率</div><dl><div><dt>首次命中</dt><dd id="hits">0 / 0</dd></div><div><dt>标点首次命中</dt><dd id="punct">0 / 0</dd></div><div><dt>错输次数</dt><dd id="errors">0</dd></div></dl></section>
+<section class="card"><h2>近期易错键</h2><div id="weak"></div><button class="wide" id="review">练习易错键</button></section>
+<section class="card"><h2>最近练习</h2><div id="history"></div><small id="storage"></small></section></aside></div>
+</main></body></html>
